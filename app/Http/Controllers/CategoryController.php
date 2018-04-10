@@ -10,6 +10,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::where('parent_id', '=', 0)->get();
-        print_r($categories);
+        $allCategories = Category::pluck('title', 'id')->all();
+
+        return view('index')->with('categories', $categories)->with('allCategories', $allCategories);
     }
 }
