@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <h3>Category List</h3>
-    <ul id="tree1">
+    <ul>
         @foreach($categories as $category)
             <li>
                 {{ $category->title }}
