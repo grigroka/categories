@@ -1,11 +1,11 @@
-{{--TODO Change HTML ul to display deeper list--}}
-<ul>
+<link rel="stylesheet" href="{{ asset('css/css.css') }}">
+<div class="list">
     @foreach($children as $child)
-        <li>
+        <div class="list">
             {{ $child->title }}
             @if(count($child->children))
                 @include('children', ['children' => $child->children])
             @endif
-        </li>
+        </div>
     @endforeach
-</ul>
+</div>

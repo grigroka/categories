@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('test', 'CategoryController@index');
+Route::get('/', 'CategoryController@index');
+Route::post('add-category', 'CategoryController@addCategory')->name('add.category');
