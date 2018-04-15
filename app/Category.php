@@ -8,8 +8,12 @@ class Category extends Model
 {
     public $fillable = ['title', 'parent_id'];
 
-    public function childs()
+    public function parent()
     {
-        return $this->hasMany('App\Category', 'parent_id', 'id');
+        return $this->belongsTo('App\Category', 'parent_id');
+    }
+    public function children()
+    {
+        return $this->hasMany('App\Category', 'parent_id');
     }
 }

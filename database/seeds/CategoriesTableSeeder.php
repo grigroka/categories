@@ -12,12 +12,11 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             DB::table('categories')->insert([
                 'title' => str_random(6),
                 'parent_id' => rand(0, 3)
             ]);
         }
-
     }
 }

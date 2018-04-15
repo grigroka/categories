@@ -1,10 +1,10 @@
 {{--TODO Change HTML ul to display deeper list--}}
 <ul>
-    @foreach($childs as $child)
+    @foreach($children as $child)
         <li>
             {{ $child->title }}
-            @if(count($child->childs))
-                @include('child', ['childs' => $child->childs])
+            @if(count($child->children))
+                @include('children', ['children' => $child->children])
             @endif
         </li>
     @endforeach

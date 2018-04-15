@@ -4,8 +4,8 @@
         @foreach($categories as $category)
             <li>
                 {{ $category->title }}
-                @if(count($category->childs))
-                    @include('child',['childs' => $category->childs])
+                @if(count($category->children))
+                    @include('children',['children' => $category->children])
                 @endif
             </li>
         @endforeach
